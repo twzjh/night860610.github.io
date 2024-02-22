@@ -1,0 +1,109 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+
+.container{
+    /* background-color: aquamarine; */
+    width: 100%;
+    height: 100vh;  
+}
+.nav{
+    background-color: lightgray;
+    width: 100%;
+    height: 100px;
+}
+
+.logo{
+    background-image: url(../images/logo.JPG);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    margin-left: 10PX;
+}
+.logo:hover{
+    background-image:url(../images/logo-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-btn-all{
+    /* background-color: aqua; */
+    float: right;
+    height: 100%;
+}
+.nav-btn{
+    background-color: powderblue;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 10vh;
+    text-decoration: none;
+    border-radius: 30PX;
+    color:black;
+    font-weight: 600;
+    padding: 8px;
+}
+.nav-btn:hover{
+    color: chocolate;
+    text-shadow: -1px 0 0 olive, 0 1px 0 olive, 1px 0 0 olive, 0 -1px 0 olive;
+    background-color: rgb(121, 55, 121);
+}
+a:visited{
+    color: red;
+}
+.content-all{
+    background-color: antiquewhite;
+    width: 100%;
+    height: calc(100% - 100px);
+    padding-top: 20px;
+}
+.content{
+    /* background-color: blueviolet; */
+    width: 700px;
+    height: 800px;
+    margin: auto;
+}
+.img{
+    background-color: black;
+    /* width: 33%; */
+    height:calc(50% - 5px);
+    float: left;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+.img-1{
+    background-image: url(../images/left.jpg);
+    width: 100%;
+    margin-bottom: 10PX;
+}
+.img-1:hover{
+    background-image: url(../images/222.jpg);
+    border-radius: 10px;
+}
+
+.img-2{
+    background-image: url(../images/mid.jpg);
+    width: calc(50% - 5PX);
+    margin-right: 10px;
+}
+.img-2:hover{
+    transform: scale(0.95);
+    opacity: 0.9;
+    border-radius: 10px;
+}
+.img-3{
+    background-image: url(../images/333.jpg);
+    width: calc(50% - 5PX);
+}
+.img-3:hover{
+    background-image: url(../images/4444.jpg);
+    border-radius: 10px;
+}

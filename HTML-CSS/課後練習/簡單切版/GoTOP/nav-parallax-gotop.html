@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav-parallax</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0 10%;
+            background-color: antiquewhite;
+        }
+
+        .nav{
+            /* background-color: aquamarine; */
+            width: calc(80% - 10px*2);
+            height: calc(100px - 10px*2);
+            position: fixed;
+            padding: 10px;
+            z-index: 9;
+        }
+
+        .logo{
+            width: 80px;
+            height: 80px;
+            background-image: url(./images/logo.JPG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: left;
+            border-radius: 50%;
+        }
+        .logo:hover{
+            background-image: url(./images/logo-2.jpg);
+            cursor: pointer;
+            /* transform: scale(0.8);
+            transform: rotate(90deg); */
+        }
+
+        .nav-btn-all{
+            /* background-color: plum; */
+            /* width: 300px; */
+            /* height: 80px; */
+            float: right;
+        }
+        .nav-btn{
+            background-color: lightcyan;
+            width: 80px;
+            height: 50px;
+            float: left;
+            margin-left: 10px;
+            margin-top: 15px;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-family: "細明體";
+            font-weight:600;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav-btn:hover{
+            transform: scale(0.8);
+        }
+
+        /* 原連結的設定 => 例如 字的顏色 */
+        a:link{
+            color: rgb(255, 0, 0);
+        }
+        /* 已連結過網站 =>例如 字的顏色 */
+        a:visited{
+            color:hotpink;
+        }
+        /* 當滑鼠移到連結上方的設定 =>例如 背景顏色改變 */
+        a:hover{
+            color: gray;
+        }
+        /* 滑鼠按下連結時的設定 =>例如 字的顏色改變 */
+        a:active{
+            background-color: rgb(10, 10, 10);
+        }
+
+
+        .all{
+            /* background-color: hotpink; */
+            width: 100%;
+            height: 100vh;
+        }
+
+        .banner{
+            background-color: brown;
+            width: 100%;
+            height: 50vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+            padding-top: 50vh;
+            position: relative;
+        }
+        #banner-1{
+            background-image: url(./images/banner-1.jpg);     
+        }
+        #banner-2{
+            background-image: url(./images/banner-2.jpg);     
+        }
+        #banner-3{
+            background-image: url(./images/banner-3.jpg);     
+        }
+
+        .mask{
+            background-color: black;
+            width: 100%;
+            height: 50vh;
+            opacity: 30%;
+        }
+
+        .btn{
+            background-color: rgb(0, 255, 0);
+            width: 150px;
+            height: 60px;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            top: 75%;
+            transform:translate(-50%, -50%);
+            font-family: "細明體";
+            font-weight:600;
+            font-size: 48px;
+            line-height: 60px;
+            text-align: center;
+        }
+        .btn-1:hover {
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: black;
+            color: rgb(0, 255, 0);
+        }
+        .btn-2:hover {
+            cursor: pointer;
+            border-radius: 80px;
+            background-color: rgb(233, 3, 3);
+            color: rgb(0, 255, 0);
+        }
+        .btn-3:hover {
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: yellow;
+            color: purple;
+        }
+
+        .gotop{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            right: 4%;
+            bottom: 10PX;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100PX;
+            font-size: 32PX;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 1.導覽列(透明)
+        a.logo(特效)
+        b.按鈕區 - 3顆按鈕
+    2.內容
+        a.三區(圖片)
+        b.一半mask(遮罩)
+        中間有一個方塊(標示區域)  -->
+
+    <div class="nav">
+        <div class="logo"></div>
+        <div class="nav-btn-all">
+            <!-- 錨點 -->
+            <!-- href =>hyperlink refrence -->
+            <!-- a為行內元素 -->
+            <!-- <a href="#banner-1">ABC</a> -->
+            <a href="#banner-1" class="nav-btn nav-btn-1">A區</a>
+            <a href="#banner-2" class="nav-btn nav-btn-2">B區</a>
+            <a href="#banner-3" class="nav-btn nav-btn-3">C區</a>
+        </div>
+    </div> 
+    <div class="all">
+        <div id="banner-1" class="banner">
+            <div class="mask"></div>
+            <div class="btn btn-1">A區</div>
+        </div>
+        <div id="banner-2" class="banner">
+            <div class="mask"></div>
+            <div class="btn btn-2">B區</div>
+        </div>
+        <div id="banner-3" class="banner">
+            <div class="mask"></div>
+            <div class="btn btn-3">C區</div>
+        </div>
+    <a href="#" class="gotop">TOP</a>
+    </div>
+</body>
+</html>

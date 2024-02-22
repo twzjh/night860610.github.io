@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角形</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+    }
+    .box-1{
+        width: calc(300px - 150px*2);
+        height: calc(300px - 150px*2);
+        border: 150px solid;
+        border-top-color: aqua;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        margin-bottom: 20px;
+    }
+    .box-2{
+        width: 300px;
+        height: 150px;
+        background-color: black;
+        border-radius: 30px;
+        position: relative;
+    }
+
+
+    .box-2-1{
+        width: calc(20px - 10px*2);
+        height: calc(20px - 10px*2);
+        border: 20px solid;
+        border-top-color: red;
+        border-right-color: red;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        position: absolute;
+        right: 0;
+
+    }
+</style>
+<body>
+    <div class="box-1"></div>   
+    <div class="box-2">
+        <div class="box-2-1"></div>
+    </div>
+</body>
+</html>

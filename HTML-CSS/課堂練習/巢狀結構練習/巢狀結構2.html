@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #all{
+            background-color: antiquewhite;
+            width: 800px;
+            height: 680px;
+        }
+        #top{
+            background-color:firebrick;
+            width: 800px;
+            height: 100px;
+        }
+        #middle{
+            background-color:aqua;
+            width: 800px;
+            height: 480px;
+        }
+        #bottom{
+            background-color:green;
+            width: 800px;
+            height: 100px;
+        }
+        #left{
+            background-color:lightcoral;
+            width: 100px;
+            height: 480px;
+            float: left;
+        }
+        #right{
+            background-color:lightslategray;
+            width: 700px;
+            height: 480px;
+            float: right;
+        }
+        #top1{
+            background-color:rgb(123, 153, 119);
+            width: 700px;
+            height: 160px;
+            float: right;
+        }
+        #middle1{
+            background-color:rgb(21, 106, 233);
+            width: 700px;
+            height: 160px;
+            float: right;
+        }
+        #bottom1{
+            background-color:hotpink;
+            width: 700px;
+            height: 160px;
+            float: right;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 快速生成#all>#top+#middle>(#left+#right)+#bottom -->
+    <!-- 父層 -->
+    <div id="all">
+        <!-- 子層 -->
+        <div id="top"></div>
+        <div id="middle">
+            <div id="left"></div>
+            <div id="right">
+                <div id="top1"></div>
+                <div id="middle1"></div>
+                <div id="bottom1"></div>
+            </div>
+        </div>
+        <div id="bottom"></div>
+    </div>
+</body>
+</html>

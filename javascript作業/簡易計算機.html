@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易計算機</title>
+    <style>
+        body{
+            margin: 80px;
+        }
+        input{
+            width: 100px;
+            height: 30px;
+        }
+        p{
+            margin: 0;
+        }
+
+        .box{
+            width: 280px;
+            height: 500px;
+            background-color: orange;
+            font-size: 24px;
+            border: 2px solid;
+        }
+
+        .box p{
+            padding-bottom:20px ;
+        }
+
+        .box button{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            font-size: 24px;
+            border: 0;
+        }
+
+        .box-1{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>
+            (1)數值: <input class="number-1" type="text" oninput="validateInput(this)">
+        </p>
+    
+        <p>
+            (2)數值: <input class="number-2" type="text" oninput="validateInput(this)">
+        </p>
+    
+        <button class="plus">+</button>
+        <button class="minus">-</button>
+        <button class="times">&times;</button>
+        <button class="equals">	&divide;</button>
+        <button class="clear">CE</button>
+    
+        <div class="box-1">結果: <span class="result"></span></div>
+    
+    </div>
+
+    <script>
+        let numberOne = document.querySelector('.number-1');
+        let numberTwo = document.querySelector('.number-2');
+
+        let plusBtn = document.querySelector('.plus');
+        let minusBtn = document.querySelector('.minus');
+        let timesBtn = document.querySelector('.times');
+        let equalsBtn = document.querySelector('.equals');
+        let clearBtn = document.querySelector('.clear');
+
+        let result = document.querySelector('.result');
+
+        function validateInput(input) {
+            input.value = input.value.replace(/[^0-9]/g, ''); // 只保留數字
+        }
+
+        
+
+        plusBtn.addEventListener('click', function(){
+            let resultScore = (numberOne.value * 1 + numberTwo.value * 1);
+            console.log(resultScore);
+            result.innerHTML = resultScore;
+        });
+        minusBtn.addEventListener('click', function(){
+            let resultScore = (numberOne.value * 1 - numberTwo.value * 1);
+            console.log(resultScore);
+            result.innerHTML = resultScore;
+        });
+        timesBtn.addEventListener('click', function(){
+            let resultScore = (numberOne.value * 1 * numberTwo.value * 1);
+            console.log(resultScore);
+            result.innerHTML = resultScore;
+        });
+        equalsBtn.addEventListener('click', function(){
+            let resultScore = (numberOne.value * 1 / numberTwo.value * 1);
+            console.log(resultScore);
+            result.innerHTML = resultScore;
+        });
+
+        clearBtn.addEventListener('click', function(){
+            numberOne.value = '';
+            numberTwo.value = '';
+            
+            result.innerHTML = '';
+        });
+
+        
+    </script>
+</body>
+</html>

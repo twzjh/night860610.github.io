@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            background-color: black;
+        }
+
+        .box-big {
+            width: 800px;
+            height: 800px;
+            background-color: #d3d3d3;
+            margin: auto;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 10px;
+        }
+
+        .box {
+            width: 50%;
+            height: 50%;
+            background-color: orange;
+            border: 5px solid #d3d3d3;
+            border-radius: 10px;
+        }
+
+        .answer {
+            opacity: 0.5;
+        }
+        .answer-1 {
+            opacity: 0.6;
+        }
+        .answer-2 {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-big"></div>
+    </div>
+
+    <script>
+        let boxBig = document.querySelector('.box-big');
+        // 清空
+        boxBig.innerHTML = '';
+        // i++ => i = i + 1;
+        for(let i=0; i<4; i++){
+            console.log(i);
+        }
+
+        let level = 2;
+        //       設起始值   哨兵符(監控停止值) i++ => 做完才加
+        for (let i = 0; i < level*level; i++) {
+             console.log(i);
+            //    4              3              + 1
+            boxBig.innerHTML = boxBig.innerHTML + `<div class="box"></div>`;
+        }
+
+        let boxAll = document.querySelectorAll('.box');
+        console.log(boxAll)
+        let randomValue = Math.floor(Math.random() * (level * level)); //answer => 由亂數產生
+        // 把答案的css加入答案的box中
+        boxAll[randomValue].classList.add('answer');
+        let answer = document.querySelector('.answer');
+        answer.addEventListener('click', function() {
+            alert('恭喜過關');
+            level = level + 1;
+            boxBig.innerHTML = '';
+            for (let i = 0; i < level*level; i++) {
+                console.log(i);
+               //    4              3              + 1
+               boxBig.innerHTML = boxBig.innerHTML + `<div class="box"></div>` 
+           }
+
+           boxAll = document.querySelectorAll('.box');
+           for (let i = 0; i < level*level; i++) {
+            console.log(boxAll[i]);
+            boxAll[i].style.width = 100 / 3 + '%';
+            boxAll[i].style.height = 100 / 3 + '%';
+           }
+
+           randomValue = Math.floor(Math.random() * (level * level));
+           boxAll[randomValue].classList.add('answer-1');
+           let answer = document.querySelector('.answer-1');
+           answer.addEventListener('click', function(){
+            alert('恭喜過關');
+            level = level + 1;
+            boxBig.innerHTML = '';
+            for (let i = 0; i < level**2; i++) {
+                console.log(i);
+               //    4              3              + 1
+               boxBig.innerHTML = boxBig.innerHTML + `<div class="box"></div>` 
+           }
+
+           boxAll = document.querySelectorAll('.box');
+           for (let i = 0; i < level**2; i++) {
+            console.log(boxAll[i]);
+            boxAll[i].style.width = 100 / 4 + '%';
+            boxAll[i].style.height = 100 / 4 + '%';
+           }
+
+           randomValue = Math.floor(Math.random() * (level * level));
+           boxAll[randomValue].classList.add('answer-1');
+           let answer = document.querySelector('.answer-1');
+           answer.addEventListener('click', function(){
+            alert('恭喜過關');
+            level = level + 1;
+            boxBig.innerHTML = '';
+            for (let i = 0; i < level**2; i++) {
+                console.log(i);
+                boxBig.innerHTML = boxBig.innerHTML + `<div class="box"></div>`
+            }
+
+            boxAll = document.querySelectorAll('.box');
+            for (let i = 0; i < level**2; i++) {
+            console.log(boxAll[i]);
+            boxAll[i].style.width = 100 / 5 + '%';
+            boxAll[i].style.height = 100 / 5 + '%';
+           }
+
+           randomValue = Math.floor(Math.random() * (level * level));
+           boxAll[randomValue].classList.add('answer-2');
+           let answer = document.querySelector('.answer-2');
+           answer.addEventListener('click', function(){
+            alert('最後一關');
+            level = level + 1;
+            boxBig.innerHTML = '';
+            for (let i = 0; i <level**2; i++){
+                console.log(i);
+                boxBig.innerHTML = boxBig.innerHTML + `<div class="box"></div>`
+            }
+
+            boxAll = document.querySelectorAll('.box');
+            for (let i = 0; i < level**2; i++) {
+            console.log(boxAll[i]);
+            boxAll[i].style.width = 100 / 6 + '%';
+            boxAll[i].style.height = 100 / 6 + '%';
+           }
+
+           randomValue = Math.floor(Math.random() * (level * level));
+           boxAll[randomValue].classList.add('answer-2');
+           let answer = document.querySelector('.answer-2');
+           answer.addEventListener('click', function(){
+            alert('結束');
+           }) 
+           })
+           })
+           })
+        })
+
+        
+    </script>
+
+</body>
+
+</html>

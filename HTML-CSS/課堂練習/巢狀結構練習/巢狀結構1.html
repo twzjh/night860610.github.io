@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #all{
+            background-color: antiquewhite;
+            width: 800px;
+            height: 600px;
+        }
+        #top{
+            background-color:firebrick;
+            width: 800px;
+            height: 100px;
+        }
+        #middle{
+            background-color:aqua;
+            width: 800px;
+            height: 400px;
+        }
+        #bottom{
+            background-color:green;
+            width: 800px;
+            height: 100px;
+        }
+        #left{
+            background-color:lightcoral;
+            width: 400px;
+            height: 400px;
+            float: left;
+        }
+        #right{
+            background-color:lightslategray;
+            width: 400px;
+            height: 400px;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 快速生成#all>#top+#middle>(#left+#right)+#bottom -->
+    <!-- 父層 -->
+    <div id="all">
+        <!-- 子層 -->
+        <div id="top"></div>
+        <div id="middle">
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+        <div id="bottom"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神廟</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 80px;
+            height: 300px;
+            background-color: transparent;
+            position: relative;
+        }
+        .box::before{
+            content:"";
+            background-color: yellow;
+            width: 100px;
+            height: 200px;
+            border-top: 50px solid red;
+            border-bottom: 50px solid red;
+            border-left: 50px solid white;
+            border-right: 50px solid white;
+            position: absolute;
+            left: -200px;
+        }
+        .box::after{
+            content:"";
+            background-color: yellow;
+            width: 100px;
+            height: 200px;
+            border-top: 50px solid red;
+            border-bottom: 50px solid red;
+            border-left: 50px solid white;
+            border-right: 50px solid white;
+            position: absolute;
+            right: -300px;
+        }
+        .box-1{
+            width: 80px;
+            height: 300px;
+            background-color: transparent;
+            position: relative;
+        }
+        .box-1::before{
+            content:"";
+            /* background-color: yellow; */
+            width: 600px;
+            height: 200px;
+            /* border-top: 50px solid red; */
+            border-bottom: 100px solid red;
+            border-left: 50px solid white;
+            border-right: 50px solid white;
+            position: absolute;
+            bottom: 100%;
+            transform: translate(-50%,0);
+        }
+        .box-1::after{
+            content:"";
+            /* background-color: yellow; */
+            width: 800px;
+            height: 200px;
+            /* border-top: 50px solid red; */
+            border-bottom: 180px solid burlywood;
+            border-left: 200px solid white;
+            border-right: 200px solid white;
+            position: absolute;
+            bottom: -60%;
+            transform: translate(-50%,0);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box-1"></div>
+
+</body>
+</html>

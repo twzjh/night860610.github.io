@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 3000px;
+            background-color: #F0F0F0;
+
+        }
+        #nav{
+            background-color: white;
+            width: 100%;
+            height: 56px;
+            position: fixed;
+            z-index: 9;
+        }
+        #fb-logo{
+            background-image: url(./images/svg/svgexport-1.svg);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 10px;
+            bottom: calc(50% - 20px)           
+        }
+        #logo-1{
+            background-color: #f0f2f5 ;
+            width: 280px;
+            height: 40px;
+            border-radius: 50px;
+            background-repeat: no-repeat;
+            position:absolute;
+            left: 60px;
+            bottom: calc(50% - 20px);
+            font-size: 16px;
+            color: gray;
+            text-align:left;
+            line-height: 40px;
+            text-indent: 30px;
+        }
+        #logo-1-1{
+            background-image: url(./images/svg/svgexport-3.svg);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 10px;
+            bottom: calc(50% - 10px);
+        }
+        #logo-2{
+            background-color: white;
+            width: 420px;
+            height: 56px;
+            position:absolute;
+            left:calc(50% - 200px) ;
+        }
+        #logo-2-1{
+            background-image: url(./images/svg/svgexport-4.svg);
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            bottom: calc(50% - 15px);
+        }
+        #logo-2-2{
+            background-image: url(./images/svg/svgexport-5.svg);
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 100px;
+            bottom: calc(50% - 15px);
+        }
+        #logo-2-3{
+            background-image: url(./images/svg/svgexport-6.svg);
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 200px;
+            bottom: calc(50% - 15px);
+        }
+        #logo-2-4{
+            background-image: url(./images/svg/svgexport-7.svg);
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 300px;
+            bottom: calc(50% - 15px);
+        }
+        #logo-2-5{
+            background-image: url(./images/svg/svgexport-8.svg);
+            width: 30px;
+            height: 30px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            right:0;
+            bottom: calc(50% - 15px);
+        }
+        #logo-3{
+            background-color: white;
+            width: 180px;
+            height: 56px;
+            position:absolute;
+            right: 0;
+        }
+        #logo-3-1{
+            background-image: url(./images/svg/svgexport-14.svg);
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            bottom: calc(50% - 10px);
+        }
+        #logo-3-2{
+            background-image: url(./images/svg/svgexport-13.svg);
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 50px;
+            bottom: calc(50% - 10px);
+        }
+        #logo-3-3{
+            background-image: url(./images/svg/svgexport-12.svg);
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:absolute;
+            left: 100px;
+            bottom: calc(50% - 10px);
+        }
+        #logo-3-4{
+            background-image: url(./images/duck.jpg);
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            position:absolute;
+            left: 130px;
+            bottom: calc(50% - 20px);
+        }
+
+        #all{
+            background-color: #F0F0F0;
+            width: 80%;
+            height: 1000px;
+            margin: auto;
+            padding-top: 56px;
+        }
+        #banner{
+            background-color: lightblue;
+            width: 100%;
+            height: 500px;
+            margin: auto;
+            position: relative;
+            border-radius: 10px;
+            background-image: url(./images/Japan.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+        #banner-1{
+            background-color:#00000066;
+            width: 160px;
+            height: 40px;
+            position: absolute;
+            border-radius: 10px;
+            right: 10px;
+            bottom: 74px;
+            font-size: 16px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #banner-2{
+            background-color:#00000066;
+            width: 160px;
+            height: 40px;
+            position: absolute;
+            border-radius: 10px;
+            right: 10px;
+            bottom: 20px;
+            font-size: 16px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+
+        #duck{
+            background-color: brown;
+            width: 200px;
+            height: 200px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: absolute;
+            left: 5%;
+            bottom: -100px;
+            background-image: url(./images/duck.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 8;
+        }
+        #duck-1{
+            background-color: brown;
+            width: 30px;
+            height: 30px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: absolute;
+            right: 25px;
+            bottom: 0;
+            background-image: url(./images/camera.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #down{
+            background-color: #F0F0F0;
+            width: 80%;
+            height: 120px;
+            margin: auto;
+            position: relative;
+            font-size: 60px;
+            color: #000000;
+            font-weight: bold;
+            text-indent: 150px;
+        }
+        #down-1{
+            background-color: #006eff;
+            width: 200px;
+            height: 60px;
+            border-radius: 10px;
+            position: absolute;
+            right: 290px;
+            bottom: 0;
+            font-size: 20px;
+            text-align: left;
+            color: #ffffff;
+            text-align: center;
+            text-indent: 0px;
+            line-height: 60px;
+        }
+        #down-2{
+            background-color: lightgray;
+            width: 200px;
+            height: 60px;
+            border-radius: 10px;
+            position: absolute;
+            right:80px;
+            bottom: 0;
+            font-size: 20px;
+            text-align: left;
+            text-align: center;
+            text-indent: 0px;
+            line-height: 60px;
+        }
+        #down-3{
+            background-color: lightgray;
+            width: 70px;
+            height: 60px;
+            background-image: url(./images/svg/svgexport-11.svg);
+            border-radius: 10px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #button{
+            height: 50px;
+            width: 80%;
+            border-top: solid;
+            border-width: 1px;
+            border-color: rgb(204, 204, 204);
+            margin: auto;
+            margin-top: 10px;
+            position: relative;
+        }
+        #button-1{
+            height: 50px;
+            width: 60px;
+            font-size: 20px;
+            position: absolute;
+            left: 2%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-2{
+            height: 50px;
+            width: 60px;
+            font-size: 20px;
+            position: absolute;
+            left: 8%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-3{
+            height: 50px;
+            width: 60px;
+            font-size: 20px;
+            position: absolute;
+            left: 14%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-4{
+            height: 50px;
+            width: 60px;
+            font-size: 20px;
+            position: absolute;
+            left: 20%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-5{
+            height: 50px;
+            width: 60px;
+            font-size: 20px;
+            position: absolute;
+            left: 26%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-6{
+            height: 50px;
+            width: 80px;
+            font-size: 20px;
+            position: absolute;
+            left: 32%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-7{
+            height: 50px;
+            width: 60px;
+            font-size: 20px;
+            position: absolute;
+            left: 40%;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bolder;
+        }
+        #button-8{
+            height: 50px;
+            width: 50px;
+            background-image:url(./images/svg/svgexport-32.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            right: 0;
+            color: gray;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="fb-logo"></div>
+        <div id="logo-1">搜尋Facebook
+            <div id="logo-1-1"></div>
+        </div>
+        <div id="logo-2">
+            <div id="logo-2-1"></div>
+            <div id="logo-2-2"></div>
+            <div id="logo-2-3"></div>
+            <div id="logo-2-4"></div>
+            <div id="logo-2-5"></div>
+        </div>
+        <div id="logo-3">
+            <div id="logo-3-1"></div>
+            <div id="logo-3-2"></div>
+            <div id="logo-3-3"></div>
+            <div id="logo-3-4"></div>
+        </div>
+    </div>
+    <div id="all">
+        <div id="banner">
+            <div id="banner-1">使用虛擬替身建議</div>
+            <div id="banner-2">加上封面相片</div>
+            <div id="duck">
+                <div id="duck-1"></div>
+            </div>
+        </div>
+        <div id="down">唐老鴨
+            <div id="down-1">新增到限時動態</div>
+            <div id="down-2">編輯個人檔案</div>
+            <div id="down-3"></div>
+        </div>
+        <div id="button">
+            <div id="button-1">貼文</div>
+            <div id="button-2">關於</div>
+            <div id="button-3">朋友</div>
+            <div id="button-4">相片</div>
+            <div id="button-5">影片</div>
+            <div id="button-6">打卡動態</div>
+            <div id="button-7">更多</div>
+            <div id="button-8"></div>
+        </div>
+        
+    </div>
+</body>
+</html>

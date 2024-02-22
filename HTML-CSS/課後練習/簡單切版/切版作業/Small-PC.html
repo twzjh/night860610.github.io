@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small-PC</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+
+        .container{
+            background-color: aquamarine;
+            width: 100%;
+            height: 100vh;  
+        }
+        .nav{
+            background-color: lightgray;
+            width: 366px;
+            height: 100%;
+            float: left;
+        }
+        .logo{
+            background-image: url(./images/logo.JPG);
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            margin-top: 80px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-bottom: 20px;
+        }
+        .logo:hover{
+            background-image:url(./images/logo-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .nav-btn-all{
+            /* background-color: aqua; */
+            margin: auto;
+        }
+        .nav-btn{
+            background-color: powderblue;
+            width: 200px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+            line-height: 50PX;
+            text-decoration: none;
+            border-radius: 30PX;
+            color:black;
+            font-weight: 600;
+        }
+        .nav-btn:hover{
+            color: chocolate;
+            text-shadow: -1px 0 0 olive, 0 1px 0 olive, 1px 0 0 olive, 0 -1px 0 olive;
+            background-color: rgb(121, 55, 121);
+        }
+        a:visited{
+            color: red;
+        }
+        .content-all{
+            background-color: antiquewhite;
+            width: calc(100% - 366px);
+            height: 100%;
+            float: left;
+            /* padding-top: calc((100vh - 570px)/2); */
+        }
+        .content{
+            /* background-color: blueviolet; */
+            width: 800px;
+            height: 570px;
+            margin: auto;
+            margin-top:calc((100vh - 570px)/2);
+        }
+        .img{
+            background-color: black;
+            height:calc(50% - 5px);
+            float: left;
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+        .img-1{
+            background-image: url(./images/left.jpg);
+            width: 100%;
+            margin-bottom: 10PX;
+        }
+        .img-1:hover{
+            background-image: url(./images/222.jpg);
+            border-radius: 10px;
+        }
+
+        .img-2{
+            background-image: url(./images/mid.jpg);
+            width: calc(50% - 5PX);
+            margin-right: 10px;
+        }
+        .img-2:hover{
+            transform: scale(0.95);
+            opacity: 0.9;
+            border-radius: 10px;
+        }
+        .img-3{
+            background-image: url(./images/333.jpg);
+            width: calc(50% - 5PX);
+        }
+        .img-3:hover{
+            background-image: url(./images/4444.jpg);
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <!-- <div class="ham-menu-btn"></div> -->
+            <div class="logo"></div>
+            <div class="nav-btn-all">
+                <a href="https://www.youtube.com/watch?v=GqNB_mZGoxY&ab_channel=EricDuan" target="_blank" class="nav-btn nav-btn-1">山道猴子的一生(上集)</a>
+                <a href="https://www.youtube.com/watch?v=xMbOOc7iH1I&ab_channel=EricDuan" target="_blank" class="nav-btn nav-btn-2">山道猴子的一生(下集)</a>
+                <a href="https://www.youtube.com/"  target="_blank" class="nav-btn nav-btn-3">YOUTUBE</a>
+            </div>
+        </div>
+        <div class="content-all">
+            <div class="content">
+                <div class="img img-1"></div>
+                <div class="img img-2"></div>
+                <div class="img img-3"></div>
+        </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

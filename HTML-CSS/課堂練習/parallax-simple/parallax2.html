@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax</title>
+    <style>
+        body{
+            margin: 0;
+            height: 2000px;
+        }
+        #all{
+            /* background-color:aquamarine; */
+            width: 100%;
+            height: 100vh;
+        }
+        #banner-1{
+            background-image: url(./images/pig.jpg);
+            width: 100%;
+            height: 80vh;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            opacity: 0.7;
+        }
+        #btn-1{
+            background-color:rgba(243, 236, 236, 0.432) ;
+            font-size: 32px;
+            /* text-align: center; */
+            padding: 28px;
+            display: inline-block;
+            border-radius: 10px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            letter-spacing: 3px;
+            transform: translate(-50%, -50%);
+        }
+        #content-1{
+            background-color: rgba(168, 165, 168, 0.678);
+            padding: 50px;
+        }
+        #title-1{
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        #text-1{
+            text-align: justify;
+            line-height: 1.2;
+            font-size: 18px;
+        }
+
+        #banner-2{
+            background-image: url(./images/abc.jpg);
+            width: 100%;
+            height: 50vh;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            opacity: 0.7;
+        }
+        #btn-2{
+            background-color:rgba(243, 236, 236, 0.432) ;
+            font-size: 32px;
+            /* text-align: center; */
+            padding: 28px;
+            display: inline-block;
+            border-radius: 10px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            letter-spacing: 3px;
+            transform: translate(-50%, -50%);
+        }
+        #content-2{
+            background-color: rgba(168, 165, 168, 0.678);
+            padding: 50px;
+        }
+        #text-2{
+            text-align: justify;
+            line-height: 1.2;
+            font-size: 18px;
+        }
+
+        #banner-3{
+            background-image: url(./images/pig1.jpg);
+            width: 100%;
+            height: 80vh;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            position: relative;
+            opacity: 0.7;
+        }
+        #btn-3{
+            background-color:rgba(243, 236, 236, 0.432);
+            font-size: 32px;
+            text-align: center;
+            padding: 28px;
+            display: inline-block;
+            border-radius: 10px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            letter-spacing: 3px;
+            transform: translate(-50%, -50%);
+        }
+        #content-3{
+            background-color: rgba(168, 165, 168, 0.678);
+            padding: 50px;
+        }
+        #text-3{
+            text-align: justify;
+            line-height: 1.2;
+            font-size: 18px;
+        }
+
+        #banner-4{
+            background-image: url(./images/man.jpg);
+            width: 100%;
+            height: 80vh;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            opacity: 0.7;
+        }
+        #btn-4{
+            background-color:rgba(243, 236, 236, 0.432);
+            font-size: 32px;
+            text-align: center;
+            padding: 28px;
+            display: inline-block;
+            border-radius: 10px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            letter-spacing: 5px;
+            transform: translate(-50%, -50%);
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <pre>
+        1.四個區域
+        2.圖片區域
+            2-1.小方塊區
+                上有文字(padding)
+        3.內容區域(padding)
+            3-1.title
+            3-2.內容
+        ps.最後一區無內容
+    </pre> -->
+    <div id="all">
+        <div id="banner-1">
+            <span id="btn-1">Peppa Pig</span>
+        </div>
+        <div id="content-1">
+            <div id="title-1">PARALLAX DEMO</div>
+            <div id="text-1">
+                Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
+            </div>
+        </div>
+        <div id="banner-2">
+            <div id="btn-2">Hair Dryer</div>
+        </div>
+        <div id="content-2">
+            <div id="text-2">Scroll up and down to really get the feeling of how Parallax Scrolling works.
+            </div>
+        </div>
+        <div id="banner-3">
+            <div id="btn-3">烤乳豬</div>
+        </div>
+        <div id="content-3">
+            <div id="text-3">Scroll up and down to really get the feeling of how Parallax Scrolling works.  
+            </div>
+        </div>
+        <div id="banner-4">
+            <div id="btn-4">黑人</div>
+        </div>
+    </div>
+</body>
+</html>

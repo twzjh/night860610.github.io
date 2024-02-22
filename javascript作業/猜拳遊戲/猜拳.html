@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜拳</title>
+    <link rel="stylesheet" href="./猜拳.css">
+</head>
+<body>
+    <div class="container">
+        <h1>剪刀石頭布</h1>
+        <div class="img-container">
+            <div class="shake"><a href="#"><img class="scissors" src="./img/剪刀.jpg" alt=""></a></div>
+            <div class="shake"><a href="#"><img class="rock" src="./img/石頭.jpg" alt=""></a></div>
+            <div class="shake"><a href="#"><img class="paper" src="./img/布.jpg" alt=""></a></div>
+        </div>
+        <p>玩家:<span class="player"></span></p>
+        <p>電腦:<span class="comptuer"></span></p>
+        <p>結果:<span class="result"></span></p>
+        <p>贏的次數:<span class="win"></span></p>
+        <button class="rest">重新開始</button>
+    </div>
+    <script>
+        let scissors = document.querySelector('.scissors');
+        let rock = document.querySelector('.rock');
+        let paper = document.querySelector('.paper');
+
+        let player = document.querySelector('.player');
+        let comptuer = document.querySelector('.comptuer');
+        let result = document.querySelector('.result');
+        let win = document.querySelector('.win');
+        let rest = document.querySelector('.rest');
+        
+        let count = 0;
+        //player show
+        scissors.addEventListener('click', () =>{
+           playGame('剪刀'); 
+        });
+        rock.addEventListener('click', () =>{
+           playGame('石頭'); 
+        });
+        paper.addEventListener('click', () =>{
+           playGame('布'); 
+        });
+        rest.addEventListener('click', () =>{
+            player.innerHTML = '';
+            comptuer.innerHTML = '';
+            result.innerHTML = '';
+            win.innerHTML = '';
+            count.innerHTML = '';
+        });
+
+        //計算贏的次數
+        function winningTimes(){
+            if(result.innerText == '平手!' || result.innerText == '你輸了!'){
+                win.innerHTML = count;
+            }else{
+                count++;
+                win.innerHTML = count;
+            }
+        };
+
+        //computer decision
+        function randomSelect(){
+            let randomPick = Math.floor(Math.random()*3);
+            if(randomPick == 0){
+                comptuer.innerText = '剪刀';
+            }else if(randomPick == 1){
+                comptuer.innerText = '石頭';
+            }else {
+                comptuer.innerText = '布';
+            }
+        }
+
+        //decide function
+        function rules(){
+            if(player.innerText == comptuer.innerText){
+                console.log(result.innerText);
+                result.innerText = '平手!';
+            }else if(
+                (player.innerText == '剪刀' && comptuer.innerText == '布') ||
+                (player.innerText == '石頭' && comptuer.innerText == '剪刀') ||
+                (player.innerText == '布' && comptuer.innerText == '石頭') ){
+                result.innerText = '你贏了!';              
+                }else{
+                    result.innerHTML = '你輸了!';
+                };
+        };
+
+        function playGame(chocie){
+            player.innerText = chocie;
+            randomSelect();
+            rules();
+            winningTimes();
+        }
+    </script>
+</body>
+</html>

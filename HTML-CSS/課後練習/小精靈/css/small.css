@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    width: 1200px;
+    height: 300px;
+    padding: 50px 0 ;
+    background-color: blue;
+    position: relative;
+}
+.box-all {
+    position: relative;
+    width: 200px;
+    height: 200px; 
+    animation-name: boxall;
+    animation-duration: 4.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes boxall {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 200px);
+    }
+}
+
+.box-all::before {
+    content: "";
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    z-index: 5;
+}
+
+.box {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border-radius: 100px 100px 0 0;
+    transform-origin: bottom;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.box-1 {
+    background-color: yellow;
+    transform: rotate(-45deg);
+    animation-name: box1;
+}
+.box-2 {
+    background-color: yellow;
+    transform: rotate(225deg);
+    animation-name: box2;
+}
+@keyframes box1 {
+    0%, 100% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes box2 {
+    0%, 100% {
+        transform: rotate(225deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+.ball-all{
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    display: flex;
+}
+.ball-1 {
+    height: 20px;
+    width: 20px;
+    margin-right: 200px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: yellow;
+    animation-name: ballmove1;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+@keyframes ballmove1 {
+    100% {
+        opacity: 0;
+        border-color: yellow;
+    }
+}
+.ball-2 {
+    height: 20px;
+    width: 20px;
+    margin-right: 200px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: yellow;
+    animation-name: ballmove2;
+    animation-delay: 1s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+@keyframes ballmove2 {
+    100% {
+        opacity: 0;
+        border-color: yellow;
+    }
+}
+.ball-3 {
+    height: 20px;
+    width: 20px;
+    margin-right: 200px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: yellow;
+    animation-name: ballmove3;
+    animation-delay: 2s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+@keyframes ballmove3 {
+    100% {
+        opacity: 0;
+        border-color: yellow;
+    }
+}
+.ball-4 {
+    height: 20px;
+    width: 20px;
+    margin-right: 200px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: yellow;
+    animation-name: ballmove4;
+    animation-delay: 3s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+@keyframes ballmove4 {
+    100% {
+        opacity: 0;
+        border-color: yellow;
+    }
+}
+.ball-5 {
+    height: 20px;
+    width: 20px;
+    margin-right: 200px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: yellow;
+    animation-name: ballmove5;
+    animation-delay: 4s;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+@keyframes ballmove5 {
+    100% {
+        opacity: 0;
+        border-color: yellow;
+    }
+}
+
+
+
